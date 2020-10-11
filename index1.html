@@ -9,49 +9,69 @@
 </head>
 <h1>Documentation</h1>
 <div class="section-1">
-    <br>
-    <p>I was first drawn to a creative experience that can visualize who is awake and who is asleep. Although in the end, I strayed away from a more creative visualization of data, I'm happy I developed a functional web app that tells the user helpful information.
-        The best way to describe my project is through a series of user experiences:
+
+    <h3>Intro</h3>
+    <p>I was first drawn to a creative experience that visualizes a dynamic data set. I thought about visualizing local species populations, Central Park bird sitings, Amazon rainforest deforestation, who's awake and who's asleep. and my personal sleep patterns.
+        These are all data sets I'd love to explore further. As I searched for an API that fit these ideas, I finally settled with a timezone API for the who's awake, who's asleep concept. Although I think there are plenty of better sources and ways to
+        achieve my site's functionality, I'm happy I developed a simple, functional web app that works.
+
+        <h3>Description </h3>
+        Here's is a simple web page that is both a functional application, as well as a depiction of my UX process. There are three UX's on display. One, the manual input of latitude and longitude values in the input boxes. Two, the city drop down menu, which
+        eliminates the user step of searching for the latitude and longitude values. And three, the map, which allows the user to click on the map for their desired location.
+        <h3>The best way to document my project is through a description of each of these user experiences:</h3>
         <ol>
-            <li class="list1"> I found an API that requires latitude and longitude coordinates. I first wanted the user to input the coordinates of a desired location. I created some "label" elements, allowed the user to manipulate the API with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>                (${}), and followed Mathura’s Pokemon video on how to access an API. I set parameters, for three returns:
+            <li class="list1"> I found an API that requires latitude and longitude coordinates. I first wanted the user to input the coordinates of a desired location. I created some "label" elements. I set variables to the input values (lines 57-58). I fetched the API
+                (lines 70-75). I allowed the user to manipulate the API with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a> (${}), which was key for creating the user ineraction (line
+                62). I created invisble elements in my HTML and set variables to those values (lines 77-79). I bridged the connection between my webpage and the API (lines 80-82). I made it so the innerHTML would return different text depending on parameters.
+                I set parameters, for three returns: (lines 83-92).
                 <ul class="unordered">
                     <li> Between 8 am and 6 pm: Awake and Working Hours</li>
                     <li> Between 6 pm and 11 pm: Awake, but Outside Working Hours</li>
                     <li> Between 11 pm and 8 am: Asleep</li>
                 </ul>
+                I heavily used Mathura’s Pokemon video on how to access an API as a guide for this part.
                 <br>
                 <br>
             </li>
             <li class="list2">
-                So I was proud of that, but my project still felt like it had more potential. I met with Ellen during office hours and she suggested eliminating some of the work done by the user. We came up with a plan of implenting another JSON data set; one made by
-                me. It would be a list of selected cities with their latitude and longitude coordinates. I used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">MDN </a> to create a basic dropdown with a list
-                of cities. The challenge here was accessing my new JSON file so when the user selects one of the cities in the dropdown, this accesses the JSON data. Ellen sent me one of her <a href="https://editor.p5js.org/enickles/sketches/7oomOlCTQ"> P5.js sketches </a>where
-                she did something very similar. Referencing this, I accessed the DOM, and used this <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">MDN </a> reference to refer to my other JSON file.
-                Populating the JSON data into my input boxes was the biggest challenge. To be frank, I still don’t understand. My sister (a full-stack engineer) and Aiden helped me out with that part.
+                So I was proud of all of that, but my project still felt incomplete. Or rather, I felt it had more potential. I met with Ellen during office hours and she suggested eliminating some of the work done by the user. I agreed, making the user search for their
+                coordinates is a hassle. So we came up with a plan of implenting another JSON data set; a data set made by me. It would be a list of selected cities with their latitude and longitude coordinates. The first step was to create a dropdown
+                menu with a list of cities and their coordinates. I used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">MDN </a> to help with this. I fetched when the page loads (lines 3-8). I referenced the
+                dropdown and its options from my HTML (lines 13-14). I added new options (locations) to the select dropdown (lines 19-27). I accessed the DOM, and used this
+                <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"></a>MDN </a> reference to access each element in the array in my JSON. The biggest challenge was populating the JSON data into my input boxes (lines 34-47). I oursourced assistance for this. Ellen sent me one of her <a href="https://editor.p5js.org/enickles/sketches/7oomOlCTQ"> P5.js sketches </a>where
+                she did something very similar. Aidan and my sister also helped with this part.
             </li>
             <br>
             <br>
             <li class="list3">
                 Ok, I was on my way to more seamless user experience. I understood that there needed to be an embedded P5.js sketch. Coming up with an idea of how to visualize my experience on a p5 canvas was a challenge. Luckily, I stumbled upon a
                 <a href="https://www.youtube.com/watch?v=Ae73YY_GAU8&feature=emb_logo">Dan Shiffman video </a> , where he visualizes his subscribers on a map in a p5 canvas. He inspired me to create a UX where users can click on a map, and they will be
-                able to know if someone would be awake or asleep at that selected location. Following the Schiffman video, I imported this excellent library called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"> Mappa.js </a>                to my HTML. Mappa.js allows you to overlay a canvas on top of a tile map. It also provides some helpful commands. It took me a whole afternoon to import a map due to version issues and problems with the library link. Schiffman taught me
-                how to make an ellipse at the inputted latitude, longitude. Mappa.js has a very convenient pixelToLatLng function to convert pixels to lat and long. Lines 159 to 170 convert the pixels lat/long to and populates it in my input boxes.
-            </li>
-            <br>
-            <br>
-            <li>
-                Potential next steps would be coming up with a more clever way to visualize the map based on who’s awake and who’s asleep. I was thinking of a dynamic map that looks something like this. One more step in the UX progression would be to allows users to
-                open web page, look at the map, and immediately realize what part of the world is asleep and awake, instead of having to click on the map.
+                able to know if someone would be awake or asleep at that selected location. Following the Schiffman video, I imported this excellent library called <a href="https://mappa.js.org/docs/api-mappa.html"> Mappa.js </a> to my HTML. Mappa.js
+                allows you to overlay a canvas on top of a tile map. It also provides some helpful commands. It took me a whole afternoon to import mappa due to version issues and problems with the library link. Eventually, I figured out the issue with
+                the help of this Github <a href="https://github.com/stavrosdidakis/Mappa-GeoJSON-P5">Repo</a>. Schiffman then taught me how to make an ellipse at the inputted latitude, longitude (lines 150-152). I used the MouseIsPressed variable to create
+                a function that converts pixels to lat/long coordinates based on mouse position (159). Mappa.js has a very convenient pixelToLatLng function to convert pixels to lat and long (line 162). I used code from my UX 2 as a model to populate
+                the mouse position clicks into the input boxes (lines 168-169). I problem arose: whenever I clicked anywhere on my webpage, even outside of the map canvas, this processed as coordinates. I needed to add another if statement to constrain
+                this action to the dimensions of the canvas (line 160). Finally, I wanted to create some sort of visualization that appears at the top of the map. I created an ellipse that changes colors and is mapped to a 24 hour day (lines 172-181).
+                Depending on the time of your selection location, the position of the ellipse will change, indicating Asleep/Awake state.
             </li>
 
         </ol>
+
+        <h3>Next Steps</h3>
+        Potential next steps would be coming up with a more clever way to visualize the map based on who’s awake and who’s asleep. The ellipse is idea is not the best way to visualize where a location is on the Asleep/Awake spectrum. I was thinking of a dynamic
+        map that looks something like <a href="https://www.timeanddate.com/worldclock/sunearth.html">this</a>. I want the user to open web page, look at the map, and immediately realize what part of the world is asleep and awake, instead of having
+        to click on the map. That would be the next step in UX. Also, while documenting over the weekend, I foolishly realized that I need to adjust the awake/asleep text returns to account for weekend hours.
+
+
+
 </div>
 
 <h2>Final Words: </h2>
-I learned a lot about my coding capabilities and the progression of creating a seamless UX. Although, I could theoretically delete the first two UXs, I think it's important to showcase. <br> This project required me to seek help-- probably more than I
-hoped to. I had each interaction in my head, but I struggled with executing in my code. MDN, W3, Stackoverflow, and Mathura and Craig’s videos were all there for me and made sense. But what I wanted to achieve may have been outside of my scope. I sought
-out more help than what I would've liked. I still don't completely understand parts of my code. I feel slightly embarrassed. I don't quite feel comfortable calling this web page soley mine. Maybe that’s okay but it feels wrong to use someone and not get
-complete clarity. My next step is to get in touch with my sister to explain some of the code further. In my next project, I will make a conscious effort to stay within my scope, and only write code that I 100% understand.
+I learned a lot about my coding capabilities and the progression of creating a seamless UX. Although, I could theoretically delete the first two UXs, I think it's important to showcase. As Craig mentioned after presenting, this mirrors the UX work flow
+of professional computer programmer. This project required me to seek help-- slightly more than I hoped to. I had each interaction in my head, but I struggled with executing in my code. MDN, W3, Stackoverflow, and Mathura and Craig’s videos were all there
+for me and made sense. I still don't completely understand the part of my code where I populated the JSON data into my input boxes (lines 34-47). I feel slightly embarrassed since this is at the core of my interaction. Maybe this feeling is okay but it
+feels wrong to use someone and not get complete clarity. In my next project, I will make a conscious effort to stay within my scope, and only write code that I 100% understand. Overall, I'm proud of my work flow, and my motivation to continue to create
+a seamless UX. Thank you to my support, my sister Anna Carey, Ellen Nickles, Mathura and Craig, The Coding Train, and all of the excellent open-source resources.
 </p>
 
 <body>

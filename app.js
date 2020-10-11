@@ -15,11 +15,11 @@ window.addEventListener('load', function() {
 
             option.text = 'Choose location';
             locationDropdown.add(option);
-
+            // Adding new options (locations) to select
             locations.forEach(function(location) {
                 console.log(location);
 
-                // Adding new options (locations) to select
+
                 let option = document.createElement('option');
                 option.text = location.name;
                 option.id = location.id;
