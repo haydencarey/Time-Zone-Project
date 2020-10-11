@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's Asleep?</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/mappa-mundi@0.0.4/dist/mappa.js" type="text/javascript"></script>
+</head>
+
+
+
+</head>
+
+<body>
+    <div class="project-heading">
+        <h1>Who's Asleep and Who's Awake</h1>
+        <p>Click <a target="_blank" href="index1.html">here</a> for documentation</p>
+    </div>
+    <section class="first-section">
+        <p class="paragraph">Here's an-easy-to-use application that can determine if someone is asleep or awake depending on their location <br> Simply use the map below or input the latitude and longitude coordinates of your desired locatoin. <br><br> <strong><span class="list-heading">Some notes:</span></strong>
+            <ol class="list">
+                <li>From 8 am to 6 pm is "Awake, and working hours." <br> From 6 pm to 11 pm is Awake, but Outside Working Hours. <br> From 11 pm to 8 am is Asleep </li>
+                <li>Choose a city from the drop down.</li>
+                <li>If you're looking for a location not listed, look up the latitude and longitude coordinates of your desired location. </li>
+                <li>The coordinates should be in this format: 41.40338, 22.17403.
+                </li>
+                <li>If you see a degree symbol, use the symbol as a decimal spot.</li>
+                <li>A south latitude coordinate is negative. A west longitude coordinate is negative.</li>
+
+            </ol>
+        </p>
+        <select id="location-dropdown">
+            
+        </select>
+
+        <h2>Location: <span id="location"></span></h2>
+        <label>Latitude</label><input type="datetime" name="location" id="input-lat">
+        <label>Longitude</label><input type="datetime" name="location" id="input-long">
+        <button id="location-button">Get Info</button>
+
+        <h3 id="awakeAsleep" class="awakeAsleep"></h3>
+
+        <div id="where">
+            <h3 id="location-city" class="location-city">Where:</h3>
+        </div>
+        <div id="time-zone">
+            <h3 id="location-zone" class="location-zone">Time Zone:</h3>
+        </div>
+        <div id="time">
+            <h3 id="location-time" class="location-time">Time:</h3>
+        </div>
+    </section>
+
+    <section class="int-map">
+        <h2>Interactive Map:</h2>
+        <p class=map-p> Click your desired location on the map to find the latitude and longitude. <br> It automatically fills in the input boxes.</p>
+        <di class="dots">
+            <h3><span class="dot1"></span> = Awake, and during working hours.</h3>
+            <h3><span class="dot2"></span> = Awake, but outside of working hours.</h3>
+            <h3><span class="dot3"></span> = Asleep</h3>
+            </div>
+    </section>
+
+
+    <!--
+    <button id="new-page" onclick="GoTo()">Click Me</button>
+
+    <a href="index0.html" target="_blank">Click Me</a>
+
+-->
+
+
+
+
+
+    <script src="app.js"></script>
+
+
+
+</body>
+
+</html>

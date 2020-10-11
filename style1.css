@@ -1,0 +1,22 @@
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url("Night.jpg");
+    background-color: #191970;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    margin-top: -35px;
+    margin-left: 100px;
+    margin-right: 100px;
+    line-height: 150%;
+    font-size: larger;
+}
+
+h1,
+h2 {
+    align-items: center;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.unordered {
+    text-indent: 200px;
+}

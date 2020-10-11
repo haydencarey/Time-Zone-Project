@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<h1>Documentation</h1>
+<div class="section-1">
+    <br>
+    <p>I was first drawn to a creative experience that can visualize who is awake and who is asleep. Although in the end, I strayed away from a more creative visualization of data, I'm happy I developed a functional web app that tells the user helpful information.
+        The best way to describe my project is through a series of user experiences:
+        <ol>
+            <li class="list1"> I found an API that requires latitude and longitude coordinates. I first wanted the user to input the coordinates of a desired location. I created some "label" elements, allowed the user to manipulate the API with <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals">template literals</a>                (${}), and followed Mathura’s Pokemon video on how to access an API. I set parameters, for three returns:
+                <ul class="unordered">
+                    <li> Between 8 am and 6 pm: Awake and Working Hours</li>
+                    <li> Between 6 pm and 11 pm: Awake, but Outside Working Hours</li>
+                    <li> Between 11 pm and 8 am: Asleep</li>
+                </ul>
+                <br>
+                <br>
+            </li>
+            <li class="list2">
+                So I was proud of that, but my project still felt like it had more potential. I met with Ellen during office hours and she suggested eliminating some of the work done by the user. We came up with a plan of implenting another JSON data set; one made by
+                me. It would be a list of selected cities with their latitude and longitude coordinates. I used <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">MDN </a> to create a basic dropdown with a list
+                of cities. The challenge here was accessing my new JSON file so when the user selects one of the cities in the dropdown, this accesses the JSON data. Ellen sent me one of her <a href="https://editor.p5js.org/enickles/sketches/7oomOlCTQ"> P5.js sketches </a>where
+                she did something very similar. Referencing this, I accessed the DOM, and used this <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">MDN </a> reference to refer to my other JSON file.
+                Populating the JSON data into my input boxes was the biggest challenge. To be frank, I still don’t understand. My sister (a full-stack engineer) and Aiden helped me out with that part.
+            </li>
+            <br>
+            <br>
+            <li class="list3">
+                Ok, I was on my way to more seamless user experience. I understood that there needed to be an embedded P5.js sketch. Coming up with an idea of how to visualize my experience on a p5 canvas was a challenge. Luckily, I stumbled upon a
+                <a href="https://www.youtube.com/watch?v=Ae73YY_GAU8&feature=emb_logo">Dan Shiffman video </a> , where he visualizes his subscribers on a map in a p5 canvas. He inspired me to create a UX where users can click on a map, and they will be
+                able to know if someone would be awake or asleep at that selected location. Following the Schiffman video, I imported this excellent library called <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"> Mappa.js </a>                to my HTML. Mappa.js allows you to overlay a canvas on top of a tile map. It also provides some helpful commands. It took me a whole afternoon to import a map due to version issues and problems with the library link. Schiffman taught me
+                how to make an ellipse at the inputted latitude, longitude. Mappa.js has a very convenient pixelToLatLng function to convert pixels to lat and long. Lines 159 to 170 convert the pixels lat/long to and populates it in my input boxes.
+            </li>
+            <br>
+            <br>
+            <li>
+                Potential next steps would be coming up with a more clever way to visualize the map based on who’s awake and who’s asleep. I was thinking of a dynamic map that looks something like this. One more step in the UX progression would be to allows users to
+                open web page, look at the map, and immediately realize what part of the world is asleep and awake, instead of having to click on the map.
+            </li>
+
+        </ol>
+</div>
+
+<h2>Final Words: </h2>
+I learned a lot about my coding capabilities and the progression of creating a seamless UX. Although, I could theoretically delete the first two UXs, I think it's important to showcase. <br> This project required me to seek help-- probably more than I
+hoped to. I had each interaction in my head, but I struggled with executing in my code. MDN, W3, Stackoverflow, and Mathura and Craig’s videos were all there for me and made sense. But what I wanted to achieve may have been outside of my scope. I sought
+out more help than what I would've liked. I still don't completely understand parts of my code. I feel slightly embarrassed. I don't quite feel comfortable calling this web page soley mine. Maybe that’s okay but it feels wrong to use someone and not get
+complete clarity. My next step is to get in touch with my sister to explain some of the code further. In my next project, I will make a conscious effort to stay within my scope, and only write code that I 100% understand.
+</p>
+
+<body>
+
+</body>
+
+</html>

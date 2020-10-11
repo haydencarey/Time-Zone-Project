@@ -1,0 +1,82 @@
+body {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Night.jpg");
+    background-color: #191970;
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
+    margin-top: -35px;
+}
+
+.project-heading {
+    text-align: center;
+    margin: 100px 0;
+    font-size: large;
+}
+
+.first-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 1px;
+    margin-top: -70px;
+}
+
+.list-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 1px;
+}
+
+canvas {
+    display: block;
+    margin: 10px auto;
+}
+
+#mapid {
+    height: 180px;
+}
+
+.leaflet-container {
+    margin: auto;
+    margin-top: 25px;
+}
+
+.int-map {
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.dot1 {
+    margin-top: 25px;
+    height: 25px;
+    width: 25px;
+    background-color: #ffc922;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot2 {
+    height: 25px;
+    width: 25px;
+    background-color: #bd1159;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot3 {
+    height: 25px;
+    width: 25px;
+    background-color: #2b2f77;
+    border-radius: 50%;
+    display: inline-block;
+}
