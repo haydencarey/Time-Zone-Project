@@ -59,7 +59,7 @@ document.getElementById("location-button").addEventListener('click', function() 
     console.log(inputTextLat)
     console.log(inputTextLong)
 
-    let API_url = `http://api.timezonedb.com/v2.1/get-time-zone?key=1ZDW2CLEKDWR&format=json&by=position&lat=${inputTextLat}&lng=${inputTextLong}`;
+    let API_url = `https://api.timezonedb.com/v2.1/get-time-zone?key=1ZDW2CLEKDWR&format=json&by=position&lat=${inputTextLat}&lng=${inputTextLong}`;
 
     // work process
     // choose city
